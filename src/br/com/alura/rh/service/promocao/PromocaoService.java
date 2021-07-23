@@ -15,6 +15,8 @@ public class PromocaoService {
 		if (metaBatida) {
 			Cargo novoCargo = cargoAtual.getProximoCargo();
 			funcionario.promver(novoCargo);
+		} else {
+			throw new ValidacaoException("Funcionário não bateu a meta");
 		}
 	}
 }
